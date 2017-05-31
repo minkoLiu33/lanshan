@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  
+  <parent>
+    <groupId>com.lanshan</groupId>
+    <artifactId>lanshan.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  
+  	<groupId>com.lanshan</groupId>
+  	<artifactId>lanshan-model</artifactId>
+  	<name>${project.artifactId}</name>
+  	<packaging>jar</packaging>
+	<description>model module</description>
+	<version>${lanshan.version}</version>
+		  
+	<dependencies>
+	  <dependency>
+	  	<groupId>com.lanshan</groupId>
+	  	<artifactId>lanshan-common</artifactId>
+	  	<version>${lanshan.version}</version>
+	  </dependency>
+	</dependencies>
+	<build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                    <encoding>UTF-8</encoding>
+                    <!-- <compilerArgument>-proc:only</compilerArgument> -->
+                    <compilerArgument>-XDignore.symbol.file</compilerArgument>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

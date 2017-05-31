@@ -1,0 +1,260 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.lanshan</groupId>
+    <artifactId>lanshan.parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+  
+  <artifactId>lanshan-web</artifactId>
+  <groupId>com.lanshan</groupId>
+  <name>${project.artifactId}</name>
+  <packaging>war</packaging>
+  <version>${lanshan.version}</version>
+  
+  
+	<dependencies>
+	    <dependency>
+	      <groupId>com.lanshan</groupId>
+	      <artifactId>lanshan-model</artifactId>
+	      <version>${lanshan.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+	      <groupId>com.lanshan</groupId>
+	      <artifactId>lanshan-common</artifactId>
+	      <version>${lanshan.version}</version>
+	    </dependency>
+	    
+	    <dependency>
+	    	<groupId>com.lanshan</groupId>
+      		<artifactId>lanshan-biz</artifactId>
+      		<version>${lanshan.version}</version>
+    	</dependency>
+	    
+	    <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.8</version>
+		</dependency>
+		
+		<dependency>
+	     	<groupId>org.codehaus.jackson</groupId>
+	     	<artifactId>jackson-mapper-asl</artifactId>
+	     	<version>1.9.13</version>
+	     </dependency>
+	     
+	     <dependency>
+			<groupId>org.codehaus.jackson</groupId>
+			<artifactId>jackson-core-asl</artifactId>
+			<version>1.9.13</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+			<type>jar</type>
+			<classifier>jdk15</classifier>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>net.sf.ezmorph</groupId>
+			<artifactId>ezmorph</artifactId>
+			<version>1.0.5</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-httpclient</groupId>
+			<artifactId>commons-httpclient</artifactId>
+			<version>3.1</version>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity</artifactId>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.velocity</groupId>
+			<artifactId>velocity-tools</artifactId>
+			<type>jar</type>
+			<scope>compile</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.23</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.zxing-core</groupId>
+			<artifactId>zxing-core</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+	</dependencies>
+	
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				 <package.environment>resources</package.environment>
+			</properties>
+			<!-- 开发环境打包默认使用resources本地配置 -->
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		
+		<profile>
+			<id>dev</id>
+			<properties>
+				 <package.environment>dev</package.environment>
+			</properties>
+		</profile>
+	</profiles>
+	
+	<!-- maven build -->
+	<build>
+	  <finalName>lanshan</finalName>
+	  <resources>
+	  	<resource>
+	  		<directory>src/main/resources</directory>
+	  		<excludes>
+	  			<exclude>config/*.*</exclude>
+	  		</excludes>
+	  	</resource>
+	  </resources>
+	  <plugins>
+	  	<plugin>
+	  		 <groupId>org.apache.maven.plugins</groupId>
+	  		 <artifactId>maven-compiler-plugin</artifactId>
+	  		 <configuration>
+	  		 	<source>1.6</source>
+                <target>1.6</target>
+                <encoding>UTF-8</encoding>
+                <compilerArgument>-XDignore.symbol.file</compilerArgument>
+			  	<compilerArguments>
+	                <verbose />
+	                <bootclasspath>${java.home}/lib/rt.jar</bootclasspath>
+                </compilerArguments>  
+             </configuration>
+	  	</plugin>
+ 		<!-- 使用UTF-8编码资源文件 -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-resources-plugin</artifactId>
+            <version>2.5</version>
+            <configuration>
+                <encoding>UTF-8</encoding>
+            </configuration>
+        </plugin>
+       
+        <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-war-plugin</artifactId>
+	        <configuration>
+	            <archiveClasses>true</archiveClasses>
+	            <!-- 不加载Maven依赖文件 -->
+	            <archive>
+	                <addMavenDescriptor>false</addMavenDescriptor>
+	            </archive>
+	            <webResources>
+	                <resource>
+	                    <!-- config作为source folder，不会被打到jar中。 -->
+	                    <directory>src/main/${package.environment}/config</directory>
+	                    <targetPath>WEB-INF/classes/config</targetPath>
+	                    <filtering>true</filtering>
+	                </resource>
+	            </webResources>
+	        </configuration>
+	    </plugin>
+	    
+	  </plugins>
+	</build>
+</project>

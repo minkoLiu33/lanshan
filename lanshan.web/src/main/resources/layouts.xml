@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layouts defaultdir="/WEB-INF/layouts/">
+
+	<excludes>
+		<!-- host匹配 -->
+		<pattern>static.*</pattern>
+		<pattern>api.*</pattern>
+		<!-- 请求地址path匹配 -->
+		<pattern>/**/*.ajax</pattern>
+		<pattern>/**/*.service</pattern>
+	</excludes>
+
+	<layout page="layout/error.vm">
+        <pattern>error/*</pattern>
+    </layout>
+    
+    <layout page="layout/blank.vm">
+      
+    </layout> 
+	 <!-- 3.0 -->
+     <layout page="layout/corp3.0.vm">
+     	
+    </layout>
+    
+</layouts>
