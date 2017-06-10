@@ -7,7 +7,6 @@
     <artifactId>lanshan.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
   </parent>
-  <groupId>com.lanshan</groupId>
   <artifactId>lanshan-biz</artifactId>
   <version>${lanshan.version}</version>
   <name>${project.artifactId}</name>
