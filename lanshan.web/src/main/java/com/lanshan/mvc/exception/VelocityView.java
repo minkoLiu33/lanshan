@@ -1,4 +1,4 @@
-package com.lanshan.mvc;
+package com.lanshan.mvc.exception;
 
 import java.io.StringWriter;
 import java.util.ArrayList;

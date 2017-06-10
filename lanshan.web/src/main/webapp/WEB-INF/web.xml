@@ -9,7 +9,7 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-        	classpath*:/spring/spring-biz.xml,classpath*:/spring/spring-web.xml
+        	classpath*:/spring/spring-lanshan-biz.xml,classpath*:/spring/spring-lanshan-web.xml
         </param-value>
     </context-param>
 

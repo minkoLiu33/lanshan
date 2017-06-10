@@ -1,4 +1,4 @@
-package com.lanshan.mvc;
+package com.lanshan.mvc.exception;
 
 import org.springframework.web.servlet.view.velocity.VelocityViewResolver;
 

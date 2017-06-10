@@ -90,6 +90,17 @@
 			<artifactId>zxing-core</artifactId>
 			<version>3.3.0</version>
 		</dependency>
+		 <dependency>
+            <groupId>org.apache.geronimo.specs</groupId>
+            <artifactId>geronimo-javamail_1.4_spec </artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apache.commons</groupId>
+          <artifactId>commons-email</artifactId>
+          <version>1.2</version>
+        </dependency>
+		
 	</dependencies>
 	
 	<build>
